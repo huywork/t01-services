@@ -1,6 +1,6 @@
 services:
 
-  ibl01t-ea-cam-01:
+  bl01t-ea-cam-01:
 
     extends:
       service: linux_ioc

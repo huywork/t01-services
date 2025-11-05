@@ -27,3 +27,10 @@ entities:
     TYPE: Int8
     FTVL: CHAR
     NELEMENTS: 1048576
+
+  - type: ADCore.NDProcess
+    PORT: DET.PROC
+    P: BL01T-EA-CAM-01
+    R: ":PROC:"
+    NDARRAY_PORT: DET.DET
+
