@@ -34,3 +34,5 @@ entities:
     R: ":PROC:"
     NDARRAY_PORT: DET.DET
 
+  - type: epics.StartupCommand
+    command: dbLoadRecords(config/extra.db)
