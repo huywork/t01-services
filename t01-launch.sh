@@ -8,7 +8,7 @@ set -e
 module load argus
 
 # setup an ssh tunnel to the gateways and opis services
-gateways=$(kubectl get svc t01-gateways --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+gateways=$(kubectl get svc t01-epics-gateways --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
 opis=$(kubectl get svc t01-epics-opis --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
 sock="$HOME/.ssh/cm-%r@%h:%p"
 ssh -fNM -S "$sock" -L 9064:$gateways:9064 -L 9075:$gateways:9075 -L 8099:$opis:80 $HOSTNAME
