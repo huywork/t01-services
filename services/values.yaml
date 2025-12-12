@@ -13,11 +13,6 @@ shared: &shared
   # set to true for Channel Access to work outside of the cluster (or use a gateway)
   hostNetwork: false
 
-  # running as ixxdetector account uid,gid gives access to /dls/ixx/data
-  podSecurityContext:
-    # runAsUser: 37988
-    # runAsGroup: 37988
-
   securityContext:
     allowPrivilegeEscalation: false
 
